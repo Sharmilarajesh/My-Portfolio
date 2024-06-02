@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>  
+        <div class="container">  
+            <nav class="flex items-centre justify-between">  
+                <div class="left flex justfiy-right">  
+                    <div>  
+                        <a href="#home">Home</a>
+                        <a href="#" onclick="scrollToAbout()">About</a>  
+                        <a href="#" onclick="scrollToServices()">Services</a>
+                        <a href="#" onclick="scrollToSkills()">Skills</a>
+                
+                    </div>  
+                </div>  
+                <div class="right flex items-center">  
+                  <button class="btn btn-primary" onclick="scrollToContact()">Contact</button>  
+              </div>
+            </nav>
+        </div>  
+    </header>
+
+    <div id="home" class="hero flex items-centre justify-between">
+        <div class="left flex-1 justify-center">
+            <img src="img.png" alt="Profile">
+        </div>
+        <div class="right flex-1">
+            <h2>Hello,&nbsp; I'm </h2>
+            <h1>Sharmila</h1> 
+              <h1><span>Web Developer</span></h1>
+            <p>Welcome to my portfolio! As a passionate fresher web developer,
+                 I strive to create innovative and user-friendly websites. Though I'm still gaining experience, I'm actively learning and honing my skills. If you have any web development needs or want to collaborate, feel free to reach out. 
+                Let's create something amazing together!</p>
+            <div>
+                <button class="btn btn-secondary" onclick="downloadCV()">DOWNLOAD CV</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <center><h1>About <span>Me</span></h1></center>
+        <div class="container flex items-centre">
+            <div class="left flex-1 justify-right">
+                <img src="3.jpeg" height="400px" alt="profile pic">
+            </div>
+            <div class="right flex-1">
+                <h2>Hello! I'm Sharmila.</h2>
+                <p>I'm excited to start my career as a web developer, committed to delivering high-quality solutions that meet clients' needs.
+                     A strong online presence is essential for any business or individual, and I'm dedicated to helping them achieve their goals. 
+                    Let's collaborate and create an impressive online presence together!</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h1 class="services-head">Services</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="P_img.jpeg" alt="Portfolio Project Image">
+                    <h2>My Portfolio</h2>
+                    <a href="https://github.com/Sharmilarajesh/My-Portfolio" target="_blank" class="btn btn-primary">View Code</a>
+                    </div>
+                <div class="card">
+                    <img src="To-Do-img.png" alt="To-Do List Web Application Image">
+                    <h2>To-Do List Web Application</h2>
+                    <a href="https://github.com/Sharmilarajesh/To-Do-List" target="_blank" class="btn btn-primary">View Code</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="skills">
+      <div class="container">
+          <h2 class="skills-head">Skills</h2>
+          <div class="skills-content">
+              <div class="skills-grid">
+                  <div class="skill">
+                      <h3>HTML</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 80%;"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <h3>CSS</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 70%;"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <h3>JavaScript</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 50%;"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <h3>Java</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 70%;"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <h3>C</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 70%;"></div>
+                      </div>
+                  </div>
+                  <div class="skill">
+                      <h3>MySQL</h3>
+                      <div class="skill-bar">
+                          <div class="skill-level" style="width: 80%;"></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="skills-image">
+                  <img src="img.avif" alt="skills image">
+              </div>
+          </div>
+      </div>
+  </section>
+
+    
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h1 class="contact-head">Contact me</h1>
+            <div class="contact-form">
+                <div class="left">
+                    <p>Feel free to reach out to me via email  for any inquiries or collaborations.
+                         You can also connect with me on social media to stay updated on my latest projects and get in touch. 
+                        Looking forward to hearing from you!
+                        </p>
+                    <ul>
+                        <li>Name: Sharmila</li>
+                        <li>Address: Coimbatore, Tamilnadu</li>
+                        <li>Email: sharmilajes21@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <form id="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <textarea id="message" name="message" placeholder="Message.." required></textarea>
+                        <button type="submit" class="btn btn-primary">Send message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("0mPKF5BFOfDR0J7El");
+   })();
+</script>
+
+
+    <footer>
+        <div class="container flex items-centre justify-between">
+          <div class="socials">
+            <a href="https://www.instagram.com/prisha.2106"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.linkedin.com/in/sharmila-r21"><i class="ri-linkedin-fill"></i></a>
+            <a href="https://github.com/Sharmilarajesh"><i class="ri-github-fill"></i></a>
+        </div>
+            <div class="left">
+              <p>&copy; 2024 Sharmila. All rights reserved. "Strive for progress, not perfection."</p>
+          </div>
+        </div>
+    </footer>
+   
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

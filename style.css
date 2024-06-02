@@ -1,0 +1,655 @@
+
+:root {
+    --primary: rgb(29, 221, 189);
+    --bgDark: rgba(12, 12, 12, 0.842);
+    --white: rgb(250, 250, 250);
+    --secondary: rgb(0, 59, 50);
+    --bgLight: rgb(190, 181, 181);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bgDark);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bgDark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header nav .left a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+}
+
+header nav .left a:hover {
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .right{
+    
+    margin-left: 110%;
+    margin-top:-7% ;
+    
+}
+
+/* Hero Section Styles */
+.hero {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    display: flex; /* Added to create a flex container */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+.hero .left {
+    flex: 1; /* Ensure the left section takes up available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.hero .left img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10%; /* Make the image circular */
+    margin: 0 auto; /* Center the image */
+}
+
+.hero .right {
+    flex: 1; /* Ensure the right section takes up available space */
+    color: var(--white);
+    text-align: left; /* Align text to the left */
+    margin-left: 5px; /* Add space between image and text */
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .left,
+    .hero .right {
+        margin: 0; /* Reset margin for smaller screens */
+    }
+}
+
+.hero .right h2 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    word-spacing: 3px;
+}
+
+.hero .right h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero .right h1 span {
+    color: var(--primary);
+
+}
+
+.hero .right p {
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    font-size: 17px;
+    word-spacing: 3px;
+
+ 
+}
+
+
+/* Button Styles */
+.btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s ease;
+  
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--secondary);
+}
+section.about{
+    margin-bottom: 3rem;
+}
+
+/* About Section Styles */
+section.about .container {
+    display: flex;
+    flex-direction: row-reverse; /* Move image to the right on larger screens */
+    align-items: center;
+}
+
+section.about .left,
+section.about .right {
+    flex: 1;
+}
+
+section.about .left {
+    text-align: right; /* Align text to the right on larger screens */
+    margin-right: 2rem; /* Add space between image and text */
+}
+
+section.about .right {
+    flex: 1;
+    text-align: left; /* Align text to the left on larger screens */
+    margin-left: 7rem; /* Add space between image and text */
+}
+
+section.about .left img {
+    max-width: 100%; /* Ensure image adjusts to container size */
+    width: 330px; /* Adjust image width as needed */
+    border-radius: 15px; /* Apply border-radius to image */
+    margin-left: auto; /* Move image to the right on smaller screens */
+    margin-right: auto; /* Move image to the right on larger screens */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    section.about .container {
+        flex-direction: column; /* Switch to column layout on smaller screens */
+        text-align: center; /* Center align content on smaller screens */
+    }
+
+    section.about .left,
+    section.about .right {
+        margin: 0; /* Remove margin on smaller screens */
+        text-align: center; /* Center align text and image on smaller screens */
+    }
+
+    section.about .left img {
+        max-width: 70%; /* Adjust image width on smaller screens */
+    }
+}
+/* About Section Styles */
+section.about h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+section.about h1 span {
+    color: var(--primary);
+}
+
+section.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: orange;
+}
+
+section.about p {
+    font-family: 'Lato', sans-serif;
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    word-spacing: 3px;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+
+}
+
+/* Services Section Styles */
+.services {
+    background-color: #3498db;
+    color: black;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    font-size: large;
+}
+
+.services .services-head {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--white);
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--secondary);
+}
+
+.card a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.card a.btn-secondary {
+    background-color: var(--secondary);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Skills Section Styles */
+.skills {
+    padding: 5rem 0;
+    margin-bottom: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.skills-grid{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 30%;
+    gap: 0rem;
+   
+}
+
+.skills-head {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.skill {
+    background-color: var(--bgLight);
+    padding-bottom: -4px;   
+    border-radius: 10px;
+    margin: 1rem;
+    flex: 1 1 100%;
+ 
+    /*flex: 1 1 calc(40% - 2rem);*/
+    max-width: 400px;
+}
+
+.skill h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.skill-bar {
+    background-color: var(--white);
+    border-radius: 7px;
+    overflow: hidden;
+    height: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--primary);
+    text-align: right;
+    color: var(--white);
+    line-height: 1rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+/* Skills Image */
+.skills-image {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30rem;
+    order: 2;
+    margin-left: 25rem;
+}
+
+.skills-image img {
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .skill {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-image {
+        flex: 1 1 100%;
+        margin-top: 1rem;
+    }
+    .skills-grid{
+        width: 100%;
+    }
+
+    .skill {
+        flex: 1 1 100%;
+    }
+}
+
+/* Contact Section Styles */
+.contact {
+    background: rgba(1, 10, 29, 0.61);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: left;
+    margin-top: 4rem;
+}
+
+.contact-head {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    margin-top: 5rem ;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-form .left {
+    flex: 1;
+    padding: 1rem;
+
+
+}
+.contact-form .left p{
+    font-size: 17px;
+}
+
+.contact-form .left ul {
+    font-size: large;
+    margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+    color: orange;
+}
+
+.contact-form .left ul li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .right {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+   
+}
+.contact-form form textarea {
+    height: 150px;
+}
+
+.contact-form form button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary);
+    color: var(--secondary);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Footer Section Styles */
+footer {
+    background: var(--bgDark);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 94%, 0 100%);
+}
+
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .right{
+    margin-bottom:1rem;
+}
+footer .left{
+    margin-top: 1rem;
+}
+footer .left p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+footer .right a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+
+footer .right a img {
+    width: 30px;
+    transition: all 0.2s ease;
+}
+
+footer .right a:hover img {
+    filter: brightness(0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .left, .hero .right {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .hero .right {
+        margin-top: 2rem;
+    }
+
+    header nav .left a {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+
+    .services .card {
+        width: calc(50% - 1rem);
+    }
+
+    .contact-form {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-form .left, .contact-form .right {
+        padding: 1rem 0;
+    }
+
+    .skills-grid {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services .card {
+        width: 100%;
+    }
+
+    .hero .left img {
+        width: 70%;
+    }
+
+    header nav .left a {
+        font-size: 0.9rem;
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  .socials a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+  
+  .socials span {
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 10px;
+  }
+  
+  .socials a:hover {
+    color: var(--primary);
+  }
+  
