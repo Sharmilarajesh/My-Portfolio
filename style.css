@@ -36,10 +36,10 @@ header {
 header nav .left a {
     color: var(--white);
     text-decoration: none;
-    margin-right: 2rem;
+    margin-right: 1rem;
     text-transform: uppercase;
     transition: all .2s ease;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem 1rem;
 }
 
