@@ -652,4 +652,70 @@ footer .right a:hover img {
   .socials a:hover {
     color: var(--primary);
   }
+@media (max-width: 768px) {
+    header nav .left a {
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .hero {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+        flex-direction: column;
+    }
+
+    .hero .left,
+    .hero .right {
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero .right h1 {
+        font-size: 2.5rem;
+    }
+
+    .services .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .card {
+        width: 80%;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-image {
+        order: 1;
+        margin: 0;
+    }
+
+    .skills .skills-head {
+        margin-bottom: 1rem;
+    }
+
+   /* .skills-grid {
+        width: 100%;
+        align-items: center;
+    }*/
+
+    section.about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.about .left,
+    section.about .right {
+        margin: 0;
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 0 1rem;
+    }
+}
   
